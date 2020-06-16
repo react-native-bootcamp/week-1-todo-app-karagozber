@@ -53,7 +53,7 @@ const undoneStyles=StyleSheet.create({
         padding:10,
         borderRadius:10,
         flexDirection:'row',
-        justifyContent: 'center'
+        
     },
     textStyle:{
         fontSize:15,

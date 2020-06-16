@@ -8,7 +8,7 @@ import {
   FlatList,
 } from 'react-native'
 
-import {MyButton, MyInput, ListItem, Header} from './src/components'
+import {MyButton, MyInput, ListItem, Header} from './components'
 
 
 const App = () => {
