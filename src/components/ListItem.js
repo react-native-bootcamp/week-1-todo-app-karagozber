@@ -13,12 +13,12 @@ const ListItem=props=>{
             style={styles.container}
             onPress={statusItem}>
                 <View style={styles.dot}></View>
-                
-                <Text style={styles.textStyle}>{props.data.myEntry}</Text>
-                {
-                    status && <Text style={styles.textStyle, {fontSize: 20}}>Yapıldı!</Text>
-                }
-                
+                <View style={{flexDirection: 'row'}}>
+                    <Text style={styles.textStyle}>{props.data.myEntry}</Text>
+                    {
+                        status && <Text style={styles.textStyle, {fontWeight: 'bold', fontSize: 16}}>Yapıldı!</Text>
+                    }
+                </View>
         </TouchableOpacity>
     )
 }
@@ -30,19 +30,19 @@ const doneStyles=StyleSheet.create({
         padding:10,
         borderRadius:10,
         flexDirection:'row',
-        justifyContent: 'space-between'
+        alignItems: 'center',
+        justifyContent: 'flex-start'
     },
     textStyle:{
         fontSize:15,
         marginLeft:10,
         textDecorationLine: 'line-through',
-        textAlign: 'center'
     },
     dot:{
         width:10,
         height:10,
         backgroundColor:'black',
-        borderRadius:10        
+        borderRadius:10,        
     }
 })
 
@@ -53,7 +53,7 @@ const undoneStyles=StyleSheet.create({
         padding:10,
         borderRadius:10,
         flexDirection:'row',
-        
+        alignItems: 'center'        
     },
     textStyle:{
         fontSize:15,
